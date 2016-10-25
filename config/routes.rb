@@ -1,10 +1,17 @@
 Rails.application.routes.draw do
   
+  get 'sessions/new'
+
      get '/signup' => 'user#new' 
-     post '/signup' => 'user#create'
+     #post '/signup' => 'user#create'
+
+     get    '/login',   to: 'sessions#new'
+  	 post   '/login',   to: 'sessions#create'
+  	 delete '/logout',  to: 'sessions#destroy'
      # get '/user/:id' => 'user#show' 
     
-    
+      resources :user
+
 # resources :user
       get '/address' => 'address#index'
    post 'address/create' => 'address#create'   

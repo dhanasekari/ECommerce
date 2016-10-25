@@ -15,3 +15,6 @@ address = Address.create({fname: 'jeevitha', lname: 'pandiyan', address1: 'chinn
 
 product = Product.create({ProductName: 'sumsung j7', description: 'sumsung glaxy', price: '18000', size: '5inch', color: 'black', discount: '12000', status: 'yes'})
 product = Product.create({ProductName: 'iphone', description: 'iphone j6', price: '60000', size: '4inch', color: 'medal', discount: '55000', status: 'yes'})
+
+category = Category.create({name: 'mobile', description: 'mobile shope for all', active:true})
+category = Category.create({name: 'cloths', description: 'cloths for all', active:true})

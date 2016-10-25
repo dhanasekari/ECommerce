@@ -1,3 +1,4 @@
 class Category < ActiveRecord::Base
-	belongs_to :product
+	has_many :product
+	belongs_to :seller
 end
