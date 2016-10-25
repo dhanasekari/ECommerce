@@ -3,15 +3,14 @@ class AddressController < ApplicationController
 		@address=Address.all
 	end
 
+	def show
+		@address = Address.find(params[:id])
+	end	
+
 	def new
 	 	@address = Address.new
 	 	
-	end
-
-	private
-	def address_params
-      params.require(:address).permit(:fname, :lname, :address1, :address2, :city, :state, :pincode, :phone )
-   	end
+	end	
 
 	def create
 		@address = Address.new(address_params)
@@ -23,11 +22,7 @@ class AddressController < ApplicationController
 	def edit
 		@address = Address.find(params[:id])      
 	end
-
-	def show
-		@address = Address.find(params[:id])
-	end	
-
+	
 	def update
 		@address = Address.find(params[:id])
       
@@ -38,9 +33,11 @@ class AddressController < ApplicationController
 	def delete
 		 Address.find(params[:id]).destroy
       redirect_to :action => 'index'
-	end 
-	 def show_standard
-      @address = Address.find(params[:id])
-   end
+	end	 
+
+   private
+	def address_params
+      params.require(:address).permit(:fname, :lname, :address1, :address2, :city, :state, :pincode, :phone )
+   	end
 
 end

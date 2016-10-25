@@ -1,1 +1,14 @@
-show.html.erb
+<p>
+	 <strong>FirstName: </strong> <%= @address.fname %><br /> 
+	 <strong>LastName: </strong> <%= @address.lname %><br /> 
+	 <strong>Address1: </strong> <%= @address.address1 %><br /> 	 
+     <strong>Address2: </strong> <%= @address.address2 %><br /> 
+	 <strong>City: </strong> <%= @address.city %><br />	 
+	 <strong>State: </strong> <%= @address.state %><br />	 
+	 <strong>Pincode: </strong> <%= @address.pincode %><br />
+	 <strong>Phone: </strong> <%= @address.phone %><br />
+   <strong>Created Date:</strong> <%= @address.created_at %><br />
+</p>
+<hr />
+
+<%= link_to 'Back', {:action => 'index'} %>

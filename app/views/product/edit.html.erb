@@ -1,0 +1,16 @@
+<h1>Edit Product</h1>
+
+<%= form_for @product, :url =>{:action => "update", :id =>@product} do |product| %>
+
+<p>ProductName: <%= product.text_field 'ProductName' %></p>
+<p>Description: <%= product.text_field 'description' %></p>
+<p>Price: <%= product.text_field 'price' %></p>
+<p>Size: <%= product.text_field  'size' %></p>
+<p>Color: <%= product.text_field  'color' %></p>
+<p>Discount: <%= productproduct.text_field  'discount' %></p>
+<p>Status: <%= product.text_field  'status' %></p>
+
+<%= product.submit "Save changes" %>
+<% end %>
+
+<%= link_to 'Back', {:action => 'index' } %>

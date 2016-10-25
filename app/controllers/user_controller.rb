@@ -21,6 +21,23 @@ class UserController < ApplicationController
     render :action => 'new'
   end
 
+  def login
+    @user = User.new
+  
+   end
+
+  def login_auth
+     @auth_user = User.find_by(params[:name],params[:password])
+
+    if @auth_user && @auth_user.authenticate(params[:password])
+      flash[:notice] = "Hi Welcome #{@auth_user.name}"
+    else
+      flash[:notice] = "Invalid Username or Password"
+      flash[:color]= "invalid"
+      render "login"  
+    end
+  end
+
   private
 
     def user_params
@@ -29,22 +46,7 @@ class UserController < ApplicationController
 
     
 
-   def login
-    @user = User.new
-  
-   end
-
-  def login_auth
-     @auth_user = User.authenticate(params[:name],params[:password])
-
-    if @auth_user 
-      flash[:notice] = "Hi Welcome #{@auth_user.name}"
-    else
-      flash[:notice] = "Invalid Username or Password"
-      flash[:color]= "invalid"
-      render "login"  
-    end
-  end
+   
 
   
 end

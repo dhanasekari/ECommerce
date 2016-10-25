@@ -5,7 +5,7 @@
 
 <ul id = "address">
    <% @address.each do |addr| %>
-   <li><%= link_to addr.description, {:action => 'show', :id => addr.id} -%>
+   <li><%= link_to addr.fname, {:action => 'show', :id => addr.id} -%>
    	
    	<b> <%= link_to 'Edit', {:action => "edit",
    		:id => addr.id} %></b>

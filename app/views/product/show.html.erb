@@ -1,0 +1,14 @@
+<p>
+	 <strong>ProductName: </strong> <%= @product.ProductName %><br /> 
+	 <strong>Discription: </strong> <%= @product.description %><br /> 
+	 <strong>Price: </strong> <%= @product.price %><br /> 	 
+     <strong>Size: </strong> <%= @product.size %><br /> 
+	 <strong>Color: </strong> <%= @product.color %><br />	 
+	 <strong>Discount: </strong> <%= @product.discount %><br />	 
+	 <strong>Status: </strong> <%= @product.status %><br />
+	 
+   <strong>Created Date:</strong> <%= @product.created_at %><br />
+</p>
+<hr />
+
+<%= link_to 'Back', {:action => 'index'} %>
