@@ -1,34 +1,24 @@
-
 <% provide(:title, 'Sign up') %>
 <h1>Sign up</h1>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
-    <%= form_tag :action => 'create' do %>
-    <%= render 'shared/error_messages' %>
+    <%= form_for(@user, url: signup_path) do |f| %>
+      <%= render 'shared/error_messages' %>
 
-     <p><label for = "name">Username</label>:
-     <%= text_field 'user', 'name' %></p>
-     <p><label for = "email">Email</label>:
-     <%= email_field 'user', 'email' %></p>
+      <p><%= f.label :name %>
+      <%= f.text_field :name, class: 'form-control' %></p>
 
-     <p><label for = "password">Password</label>:
-     <%= password_field 'user', 'password' %></p>
+     <p> <%= f.label :email %>
+      <%= f.email_field :email, class: 'form-control' %></p>
 
-       <p><label for = "password_confirmation">RePassword</label>:
-     <%= password_field 'user', 'repassword' %></p>
-      
-      <%= submit_tag "Sign Up" %>
+      <p><%= f.label :password %>
+      <%= f.password_field :password, class: 'form-control' %></p>
+
+     <p> <%= f.label :password_confirmation, "Confirmation" %>
+      <%= f.password_field :password_confirmation, class: 'form-control' %></p>
+
+      <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
-    <%= link_to 'login', {:action => 'login'} %>
-    
   </div>
 </div>
-
-
-
-
-      
-
-     
-      

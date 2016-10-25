@@ -16,7 +16,7 @@ class AddressController < ApplicationController
 		@address = Address.new(address_params)
 	
    	 	@address.save
-      	redirect_to :action => 'index'		
+      	redirect_to product_path	
 	end
 
 	def edit

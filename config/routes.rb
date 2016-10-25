@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   
      get '/signup' => 'user#new' 
-     post '/signup' => 'user#create'    
-     #get '/user/show/:id' => 'user#show'
-     get '/user/login' => 'user#login'
-     post '/user/login' => 'user#login_auth' 
-      #root :to => "user#show"
-resources :users
+     post '/signup' => 'user#create'
+     # get '/user/:id' => 'user#show' 
+    
+    
+# resources :user
       get '/address' => 'address#index'
    post 'address/create' => 'address#create'   
    get 'address/new' => 'address#new'  
@@ -17,13 +16,13 @@ resources :users
    get 'address/update' =>'address#update'
 
    get '/product' => 'product#index'
-   post 'product/create' => 'product#create'   
-   get 'product/new' => 'product#new'  
-   patch  'product/update' => 'product#update'
-   get 'product/:id' =>'product#show'
-   get 'product/edit/:id' =>'product#edit'
-   get 'product/delete/:id' =>'product#delete'
-   get 'product/update' =>'product#update'
+   post '/product/create' => 'product#create'   
+   get '/product/new' => 'product#new'  
+   patch  '/product/update' => 'product#update'
+   get '/product/:id' =>'product#show'
+   get '/product/edit/:id' =>'product#edit'
+   get '/product/delete/:id' =>'product#delete'
+   get '/product/update' =>'product#update'
 
 
   	
