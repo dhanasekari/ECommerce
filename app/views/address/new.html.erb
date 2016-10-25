@@ -1,0 +1,31 @@
+<h1>Address</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "firstname">FirstName</label>:
+<%= text_field 'address', 'fname' %></p>
+
+<p><label for = "lastname">LastName</label>:
+<%= text_field 'address', 'lname' %></p>
+
+<p><label for = "address">Address1</label>:
+<%= text_field 'address', 'address1' %></p>
+
+<p><label for = "address">Address2</label>:
+<%= text_field 'address', 'address2' %></p>
+
+<p><label for = "city">City</label>:
+<%= text_field 'address', 'city' %></p>
+
+<p><label for = "state">State</label>:
+<%= text_field 'address', 'state' %></p>
+
+<p><label for = "pincode">Pincode</label>:
+<%= text_field 'address', 'pincode' %></p>
+
+<p><label for = "phone">Phone</label>:
+<%= text_field 'address', 'phone' %></p>
+
+<%= submit_tag "Add" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'index'} %>

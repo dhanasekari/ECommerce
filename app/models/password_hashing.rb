@@ -1,0 +1,1 @@
+require 'digest/sha1'password= Digest::SHA1.hexdigest(password)
