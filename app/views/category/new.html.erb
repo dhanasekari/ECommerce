@@ -1,0 +1,16 @@
+<h1>Category</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "name">CategoryName</label>:
+<%= text_field 'category', 'CategoryName' %></p>
+
+<p><label for = "description">Discription</label>:
+<%= text_field 'category', 'description' %></p>
+
+<p><label for = "price">Available</label>:
+<%= text_field 'category', 'active' %></p>
+
+<%= submit_tag "Add" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'index'} %>

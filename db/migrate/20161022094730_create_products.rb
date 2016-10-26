@@ -8,7 +8,8 @@ class CreateProducts < ActiveRecord::Migration
     	t.string :color
     	t.integer :discount
     	t.string :status
-
+      t.references :category, forein_key: true, index: true
+      t.references :user, forein_key: true, index: true
       t.timestamps null: false
     end
   end

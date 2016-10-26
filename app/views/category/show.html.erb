@@ -1,0 +1,10 @@
+<p>
+	 <strong>Category: </strong> <%= @category.name %><br /> 
+	 <strong>Discription: </strong> <%= @category.description %><br /> 
+	 <strong>Available: </strong> <%= @category.active %><br />
+	 
+   <strong>Created Date:</strong> <%= @category.created_at %><br />
+</p>
+<hr />
+
+<%= link_to 'Back', {:action => 'index'} %>

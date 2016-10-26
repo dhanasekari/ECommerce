@@ -2,6 +2,7 @@ class User < ActiveRecord::Base
 	has_many :orders
   belongs_to :seller
   has_many :addresses
+  has_many :products
 
   before_save { email.downcase! }
   validates :name,  presence: true, length: { maximum: 50 }

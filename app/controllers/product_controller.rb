@@ -2,11 +2,16 @@ class ProductController < ApplicationController
 
 	def index
 		@product=Product.all
+		#@product = current_user.products
 	end
 
 	def show
 		@product = Product.find(params[:id])
 	end	
+
+	def cart_show
+		@product = Product.find(params[:id])
+	end
 
 	def new
 	 	@product = Product.new
@@ -32,8 +37,8 @@ class ProductController < ApplicationController
     end
 
 	def delete
-		 Product.find(params[:id]).destroy
-      redirect_to :action => 'index'
+		Product.find(params[:id]).destroy
+        redirect_to :action => 'index'
 	end	 
 
    private
