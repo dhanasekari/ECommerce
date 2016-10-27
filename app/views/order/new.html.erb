@@ -1,0 +1,19 @@
+<h1>Order</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "name">SubTotal</label>:
+<%= text_field 'order', 'subtotal' %></p>
+
+<p><label for = "tax">Tax</label>:
+<%= text_field 'order', 'tax' %></p>
+
+<p><label for = "shipping">Shipping</label>:
+<%= text_field 'order', 'shipping' %></p>
+
+<p><label for = "total">Total</label>:
+<%= text_field 'order', 'total' %></p>
+
+<%= submit_tag "Add" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'index'} %>

@@ -25,6 +25,14 @@ product = Product.create({ProductName: 'sumsung j7', description: 'sumsung glaxy
 product = Product.create({ProductName: 'iphone', description: 'iphone j6', price: '60000', size: '4inch', color: 'medal', discount: '55000', status: 'yes', category_id: category.id})
 product = Product.create({ProductName: 'chudi', description: 'cotton materials', price: '1500', size: 'medium,', color: 'black', discount: '1200', status: 'yes', category_id: category.id })
 
+OrderStatus.delete_all
+OrderStatus.create! id: 1, name: "In Progress"
+OrderStatus.create! id: 2, name: "Placed"
+OrderStatus.create! id: 3, name: "Shipped"
+OrderStatus.create! id: 4, name: "Cancelled"
+
+order = Order.create({subtotal: '220', tax:'11', shipping:'109', total:'109'})
+
 
 
 

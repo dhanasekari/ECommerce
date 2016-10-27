@@ -22,7 +22,7 @@ class CategoryController < ApplicationController
 		@category = Category.new(category_params)
 		if @category.save
 			flash[:sucess] = "categories added sucessfully"
-			#redirect_to category_path
+			redirect_to category_path
 		else
 			flash[:danger] = "some problem"
 			render new

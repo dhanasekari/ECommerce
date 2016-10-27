@@ -43,5 +43,14 @@ Rails.application.routes.draw do
    get 'category/:id/show_product' => 'category#show_product'
 
 
+   get '/order' => 'order#index'
+   post '/order/create' => 'order#create'
+   get '/order/new' => 'order#new'
+    patch '/order/update' => 'order#update'
+   get '/order/show/:id' => 'order#show'
+   get '/order/edit/:id' => 'order#edit'
+  get '/order/delete/:id' => 'order#delete'
+   get '/order/update' => 'order#update'
+   
   	
 end

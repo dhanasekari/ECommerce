@@ -1,0 +1,20 @@
+<%if @order.blank?%>
+<p> There is no orders </p>
+<%else%>
+<p>Orders</p>
+<ul>
+<%@order.each do |order|%>
+<li>
+<b> <%= link_to 'show', {:action =>'show', :id => order.id}%></b>
+<b> <%= link_to 'Edit', {:action => "edit",	:id => order.id} %></b>
+<b> <%= link_to "Delete", {:action => 'delete', :id => order.id},
+    :confirm => "Are you sure you want to delete this item?" %></b>
+    
+
+</li>
+<%end%>
+</ul>
+<p><%= link_to "Add new order", {:action => 'new' }%></p>
+<%= link_to 'back', {:action =>'index'}%>
+
+<%end%>

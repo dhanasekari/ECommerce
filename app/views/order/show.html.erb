@@ -1,0 +1,10 @@
+<p>
+	 <strong>SubTotal: </strong> <%= @order.subtotal %><br /> 
+	 <strong>Tax: </strong> <%= @order.tax %><br /> 
+	 <strong>Shipping: </strong> <%= @order.shipping %><br />
+	 <strong>Total: </strong> <%= @order.total %><br />
+   <strong>Created Date:</strong> <%= @order.created_at %><br />
+</p>
+<hr />
+
+<%= link_to 'Back', {:action => 'index'} %>
